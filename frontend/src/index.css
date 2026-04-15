@@ -39,3 +39,208 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* Layout */
+.app-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.app-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.app-header p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.app-main {
+  max-width: 760px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+/* Shorten Form */
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-row input:focus {
+  border-color: var(--primary);
+}
+
+.input-row input.input-error {
+  border-color: var(--error);
+}
+
+.input-row button {
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.input-row button:hover:not(:disabled) {
+  background: var(--primary-hover);
+}
+
+.input-row button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: var(--error);
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+/* Result Card */
+.result-card {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius);
+}
+
+.result-label {
+  font-weight: 600;
+  color: var(--success);
+  margin-bottom: 10px;
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.short-link {
+  font-size: 16px;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.copy-btn {
+  padding: 6px 14px;
+  background: var(--success);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.copy-btn:hover {
+  opacity: 0.85;
+}
+
+.result-original {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.result-original span {
+  color: var(--text);
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+thead tr {
+  background: var(--bg);
+}
+
+th {
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 2px solid var(--border);
+}
+
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+tr:hover td {
+  background: var(--bg);
+}
+
+.clicks {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.date {
+  color: var(--muted);
+}
+
+.empty-msg {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px 0;
+  font-size: 14px;
+}
