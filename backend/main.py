@@ -43,6 +43,7 @@ def redirect_url(short_code: str, db: Session=Depends(get_db)):
     
     if not url_entry:
         raise HTTPException(status_code=404, detail='URL not found')
+    
     url_entry.click_count += 1
     db.commit()
     return RedirectResponse(url=url_entry.original_url)
@@ -60,5 +61,5 @@ def get_stats(short_code: str, db: Session=Depends(get_db)):
 def get_all_urls(db: Session=Depends(get_db)):
     
     urls = db.query(URL).order_by(URL.created_at.desc()).all()
-    return urls
 
+    return urls
