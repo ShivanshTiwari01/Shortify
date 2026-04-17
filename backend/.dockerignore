@@ -1,0 +1,41 @@
+# Python
+
+**pycache**/
+_.pyc
+_.pyo
+\*.pyd
+
+# Virtual environments
+
+.venv/
+venv/
+
+# Build / dist
+
+dist/
+build/
+
+# Node (frontend stuff, if in same repo)
+
+node_modules/
+bun.lockb
+
+# Git
+
+.git/
+.gitignore
+
+# Docker
+
+Dockerfile
+.dockerignore
+
+# Env files
+
+.env
+.env.\*
+
+# OS junk
+
+.DS_Store
+Thumbs.db
